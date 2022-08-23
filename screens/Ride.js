@@ -198,10 +198,8 @@ export default class RideScreen extends Component {
             <TextInput
               style={[styles.textinput, { width: '82%' }]}
 
-              //onChangeText={() => this.setState({ userId: text })}
-              //onChangeText={this.setState({ userId: text })}
-              onChangeText={(text) => this.setState({ userId: text })}
-              //onChangeText={(text) => ({ userId: text })}
+              onChangeText={text => this.setState({ userId: text })}
+
 
               placeholder={'User Id'}
               placeholderTextColor={'#FFFFFF'}
@@ -211,7 +209,7 @@ export default class RideScreen extends Component {
           <View style={[styles.textinputContainer, { marginTop: 25 }]}>
             <TextInput
               style={styles.textinput}
-              onChangeText={(text) => this.setState({ bikeId: text })}
+              onChangeText={text => this.setState({ bikeId: text })}
               placeholder={'Bicycle Id'}
               placeholderTextColor={'#FFFFFF'}
               value={bikeId}
